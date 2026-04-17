@@ -11,7 +11,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # for local development, we use the service bus emulator connection string
+
 SERVICE_BUS_CONNECTION_STR = os.getenv("SERVICE_BUS_CONNECTION_STRING")
+DEALER_EMAIL = os.getenv("DEALER_EMAIL")
 USER_EMAIL = os.getenv("USER_EMAIL")
 QUEUE_NAME = "leads"
 
@@ -185,7 +187,7 @@ def generate_dealership(make):
     return {
         "id": dealer_id,
         "name": dealership_name,
-        "email": f"contact@{dealership_name.replace(' ', '').lower()}.com",
+        "email": DEALER_EMAIL,
         "phone": f"555-{random.randint(100,999)}-{random.randint(1000,9999)}",
         "address1": f"{random.randint(10,999)} Main St",
         "address2": "",

@@ -1,5 +1,7 @@
 # Lead Intake Worker Simulator
 
+> ❗**Important**❗: This worker is just to test sending initial messages. Since the data is all mocked, it will not properly be able to persist or rehydrate data across conversations.
+
 ## Example Message
 
 ```json
